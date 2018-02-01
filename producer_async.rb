@@ -2,13 +2,13 @@
 
 require "kafka"
 
-kafka = Kafka.new(seed_brokers: ["kafka:9092"])
+kafka = Kafka.new(seed_brokers: ['kafka:9092'])
 producer = kafka.async_producer
 
 at_exit { producer.shutdown }
 
 10.times do |n|
-  producer.produce("#{__FILE__} says Hello World! #{n}", topic: 'rugb-test')
+  producer.produce("#{__FILE__} says Hello World! #{n}", topic: 'greets')
   producer.deliver_messages
   sleep 0.2
 end
