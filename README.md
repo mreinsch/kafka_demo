@@ -2,8 +2,10 @@
 
 ## Preparation
 
-1. Add `::1 kafka` to your `/etc/hosts`
-2. Start kafka in docker: `docker-compose up -d`
+1. Clone the repo, directory name has to be `kafka` otherwise the scripts `kafka_create_topic.sh` and `kafka_tail_topic.sh` won't work
+2. Add `::1 kafka` to your `/etc/hosts`
+3. Create docker network: `docker network create -d bridge test`
+4. Start kafka in docker: `docker-compose up -d`
 
 ## Demo
 
@@ -31,3 +33,7 @@
 9. simpler with thresholds: `producer_async_2.rb`
    - don't need to call `deliver_messages` anymore
 10. for producing structured messages, you just generate JSON for example: `producer_structured.rb`
+
+## Cleanup
+
+1. Stop the docker containers: `docker-compose down`
