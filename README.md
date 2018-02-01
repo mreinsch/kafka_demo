@@ -30,3 +30,4 @@
 8. for production use: async producer: `producer_async.rb`
 9. simpler with thresholds: `producer_async_2.rb`
    - don't need to call `deliver_messages` anymore
+10. for producing structured messages, you just generate JSON for example: `producer_structured.rb`
