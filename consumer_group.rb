@@ -9,5 +9,5 @@ consumer.subscribe("rugb-test", start_from_beginning: true)
 at_exit { consumer.stop }
 
 consumer.each_message do |message|
-  puts "#{message.topic}-#{message.partition} #{message.offset}: #{message.value}"
+  puts "#{message.topic}.#{message.partition}##{message.offset}: #{message.value}"
 end
