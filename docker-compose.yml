@@ -19,5 +19,4 @@ services:
 
 networks:
   test:
-    external:
-      name: test
+    driver: bridge

@@ -4,8 +4,7 @@
 
 1. Clone the repo, directory name has to be `kafka` otherwise the scripts `kafka_create_topic.sh` and `kafka_tail_topic.sh` won't work
 2. Add `::1 kafka` to your `/etc/hosts`
-3. Create docker network: `docker network create -d bridge test`
-4. Start kafka in docker: `docker-compose up -d`
+3. Start kafka in docker: `docker-compose up -d`
 
 ## Demo
 
